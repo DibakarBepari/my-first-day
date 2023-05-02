@@ -1,0 +1,11 @@
+class person:
+    def __init__(self,name , age):
+        self.name = name
+        self.age = age
+    @classmethod
+    def from_string(cls,string):
+        # name,age = string.split(",")
+        return cls(string.split(",")[0],int(string.split(",")[1])) #commentout this & uncomment out other two the output is same
+        # return cls(name,int(age))
+pers = person.from_string("Jhone Deo , 28")
+print(pers.name, pers.age)
